@@ -1,0 +1,763 @@
+@import "./base.scss";
+.is-null{
+	text-align: center;
+	line-height: 120px;
+	font-size: 14px;
+	color:#666;
+}
+/* ::-webkit-scrollbar{
+	width: 10px;
+	height: 10px;
+}
+::-webkit-scrollbar-thumb{
+	background-color: rgba(144,147,153,.6);
+	border-radius: 5px;
+	cursor: pointer;
+	&:hover{
+		background-color: rgba(144,147,153,.8);
+	}
+}
+::-webkit-scrollbar-track{
+
+} */
+.scroll-bar{
+	height: 100%;
+	.el-scrollbar__wrap {
+	  overflow-x: hidden;
+	}
+}
+.el-scrollbar__wrap {
+	// overflow-x: hidden;
+}
+
+/*主体class*/
+.main-body{
+	padding:50px 5%;
+	font-size: 16px;
+	box-sizing: border-box;
+	.main-wrapper{
+		padding:50px 30px 50px;
+		background-color: #fff;
+	}
+	.main-wrapper-type2{
+		padding:50px 110px 50px;
+		background-color: #fff;
+	}
+	.page-title{
+		font-size: 20px;
+		color:#333;
+		margin-bottom: $margin;
+		display: flex;
+		align-items:center;
+		justify-content:space-between;
+	}
+	.el-loading-mask{
+		z-index: 1994;
+	}
+}
+
+/*按钮*/
+.ele-btn,.ele-default,.ele-gray{
+	padding:0;
+	width: 100px !important;
+	height: $b-height !important;
+	line-height: $b-height !important;
+	font-size: 12px;
+}
+.ele-btn{
+	background-color:$t-color;
+	color:#fff;
+	border:solid 1px $t-color;
+	transition:all 0.3s ease;
+}
+.ele-default{
+	background-color:#fff;
+	color:$t-color;
+	border:solid 1px $t-color;
+	transition:all 0.3s ease;
+}
+.ele-default{
+	&:hover{
+		background-color:$t-color;
+		color:#fff;
+	}
+}
+.ele-gray{
+	background-color:#fff;
+	color:#abadb3;
+	border:solid 1px #abadb3;
+	transition:all 0.3s ease;
+	&:hover{
+		background-color:#abadb3;
+		color:#fff;
+		border-color:#abadb3;
+	}
+}
+
+/*自定义输入框高度*/
+.ele-input{
+	width: auto;
+	input{
+		width: 200px !important;
+		height: $b-height !important;
+		line-height: $b-height !important;
+	}
+	.el-input__icon{
+		line-height: $b-height !important;
+	}
+}
+#role .ele-input {
+    input {
+        width: 220px !important;
+    }
+}
+.ele-select{
+	input{
+		width: 160px;
+		height: $b-height !important;
+		line-height: $b-height !important;
+	}
+	.el-input__icon{
+		line-height: $b-height !important;
+	}
+}
+.ele-cascader{
+	width: 160px !important;
+	height: $b-height !important;
+	line-height: $b-height !important;
+	input{
+		width: 160px !important;
+		height: $b-height !important;
+	}
+}
+
+.ele-date-editor{
+	width: 300px !important;
+	height: $b-height !important;
+	padding:3px 10px;
+	.el-range-separator{
+		line-height: 22px !important;
+	}
+	.el-input__icon{
+		line-height: 22px !important;
+	}
+}
+
+.ele-textarea{
+	width: 450px;
+	height: 150px;
+	textarea{
+		width: 100%;
+		height: 100%;
+	}
+}
+
+/*操作按钮*/
+.edit-group{
+	font-size: 12px;
+	color:$t-color;
+	display: flex;
+	align-items:center;
+	em{
+		color:#666;
+	}
+	span{
+		cursor: pointer;
+	}
+}
+.edit-btn{
+	font-size: 12px;
+	color:$t-color;
+	cursor: pointer;
+	margin-right: 10px;
+}
+
+/*自定义表头*/
+.ele-table-init{
+	margin-top: $margin;
+	width: 100%;
+	th{
+		background: #ecf5ff;
+	    color: #57aaff;
+	    font-size: 14px;
+	    height: 50px;
+	}
+	td{
+		color:#888;
+		height:40px;
+		padding:0;
+		font-size:12px;
+	}
+	.el-button span{
+		font-size: 12px;
+	}
+}
+
+/*自定义dialog*/
+.init-dialog{
+	position: fixed;
+	left:0;
+	top:0;
+	width: 100%;
+	height: 100%;
+	z-index: 1998;
+	background-color: rgba(0,0,0,0.5);
+	.dialog-box{
+		width: 600px;
+		overflow: hidden;
+		position: absolute;
+		left:50%;
+		top:50%;
+		transform:translate3d(-50%,-50%,0);
+		background-color: #fff;
+		.dialog-head{
+			padding:0;
+			height: 56px;
+			background-color: $t-color;
+			text-align: center;
+			line-height: 56px;
+			color:#fff;
+			position: relative;
+			font-size: 20px;
+			.close{
+				position:absolute;
+				right:10px;
+				top:50%;
+				width:20px;
+				height:20px;
+				margin-top:-10px;
+				cursor:pointer;
+				background-image: url(../../assets/images/whiteClose.png);
+				background-size: 100%;
+				transition:all 0.5s ease;
+				&:hover{
+					transform:rotate(360deg);
+				}
+			}
+		}
+		.dialog-body{
+			padding:0 50px;
+			text-align: center;
+			.dialog-msg{
+				padding:60px 0;
+				color:#888;
+			}
+			.dialog-content{
+				padding:60px 0;
+				color:#888;
+				p{
+					line-height: 24px;
+				}
+			}
+		}
+		.dialog-footer{
+			text-align: center;
+			margin-bottom: 30px;
+			.cancel{
+				margin-left: 20px;
+			}
+		}
+	}
+}
+
+/*统计布局*/
+.flex-total{
+	display: flex;
+	align-items:center;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	.item{
+		flex:1;
+		text-align: center;
+		.number{
+			font-size: 50px;
+			color:$t-color;
+		}
+		p{
+			font-size: 14px;
+			color:#666;
+			margin-top: 24px;
+		}
+	}
+}
+
+/*分页*/
+.pagination{
+	text-align: center;
+	margin-top: 10px;
+}
+/*弹窗样式*/
+.dialogBox{
+	position: fixed;
+	left: 36%;
+    top: 30%;
+	width: 600px;
+	height: 256px;
+	z-index: 999;
+	.header{
+		width: 100%;
+		height: 56px;
+		background-color: $t-color;
+		padding: 0;
+		position: relative;
+		.fontSize{
+			color:#fff;
+			line-height: 56px;
+			font-size: 20px;
+			text-align: center;
+		}
+		.closeBtn{
+			display: block;
+			position: absolute;
+			top: 18px;
+			right: 18px;
+			width: 20px;
+			height:20px;
+			cursor: pointer;
+			background-image: url(../../assets/images/whiteClose.png);
+			background-size: 100%;
+		}
+	}
+	.dialogBody{
+		background-color: #fff;
+		padding: 0 50px;
+		text-align: center;
+		.content{
+			padding:60px 0;
+			font-size: 16px;
+			color:#333;
+			p{
+				font-size: 14px;
+				color:#333;
+			}
+		}
+	}
+	.dialogFooter{
+		text-align: center;
+		background-color: #fff;
+		height:64px;
+	}
+}
+
+
+.dialog-content.group{
+	.item{
+		display: flex;
+		justify-content:center;
+		.text{
+			line-height: 30px;
+		}
+		p{
+			text-align: left;
+			margin-top: 10px;
+		}
+	}
+}
+.dialog-content.import{
+    overflow: auto;
+    text-align: left;
+    .result{
+    	margin: -20px 0 20px 81px;
+    	font-size: 12px;
+    }
+    .tip{
+    	margin-top: 8px;
+    	color: #b7b4b4;
+    	line-height: 22px;
+    	font-size: 12px;
+    }
+}
+
+//表格内容省略号
+.writeWrapper{
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+	line-height: 23px;
+}
+
+.el-tooltip__popper.is-light{
+	border: 1px solid #979899;
+	color: #979899;
+}
+
+.el-tooltip__popper{
+
+}
+
+#role {
+    .el-button {
+        height: 35px;
+        line-height: 10px;
+    }
+    .delete-style {
+        .el-dialog {
+            width: 33%;
+        }
+    }
+    .el-pagination {
+        margin-top: 35px;
+        text-align: center;
+    }
+
+}
+// 角色绑定 start
+.role-bind {
+  .create-accounr {
+    .el-dialog__body {
+      padding-bottom: 0;
+    }
+  }
+  .dialog-submit {
+    text-align: center;
+    .submit {
+      width: 100px;
+      height: 30px;
+      padding: 0;
+      background-color: #169BD5;
+    }
+  }
+  .account {
+    .el-form-item__content {
+      width: 100%;
+    }
+    .input-width {
+      .el-input__inner {
+        width: 370px!important;
+      }
+    }
+    .ele-input {
+      &.start-value {
+        width: 150px!important;
+        .el-input__inner {
+          width: 150px!important;
+        }
+      }
+    }
+  }
+  .second-pwd {
+    .el-dialog__header {
+      padding: 0;
+      background-color: #409EFF;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      .el-dialog__title {
+        color: #fff;
+      }
+      .el-dialog__headerbtn {
+        top: 6px;
+        right: 8px;
+        font-size: 24px;
+      }
+      .el-icon-close {
+        color: #fff;
+        padding: 5px;
+      }
+    }
+    .el-dialog__body {
+      padding: 0;
+      padding-top: 62px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+      .el-input {
+        width: 200px;
+      }
+      .el-form-item {
+        width: 300px;
+        margin-bottom: 58px;
+      }
+    }
+    .el-dialog__footer {
+      text-align: center;
+      .el-button {
+        padding: 0;
+        width: 100px;
+        height: 30px;
+        span {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  .user-bind {
+    .el-dialog__header {
+      padding: 0;
+      .el-dialog__title {
+        display: none;
+      }
+      .el-dialog__headerbtn {
+        top: 5px;
+        right: 6px;
+      }
+    }
+    table {
+      thead {
+        tr {
+          th {
+            background-color: #ecf5ff;
+            color: #57aaff;
+            border-top: 1px solid #ddd;
+            border-right: 1px solid #ddd;
+            text-align: center;
+            &:nth-of-type(1) {
+              border-left: 1px solid #ddd;
+            }
+          }
+        }
+      }
+      tbody {
+        tr {
+          td {
+            padding: 0;
+            text-align: center;
+            height: 41px;
+            border-right: 1px solid #ddd;
+            &:nth-of-type(1) {
+              border-left: 1px solid #ddd;
+            }
+          }
+        }
+      }
+    }
+  }
+  .premiss-bind {
+    .el-dialog__body {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      .el-button {
+        margin-top: 10px;
+        width: 160px;
+        height: 48px;
+        background-color: #169BD5;
+        color: #fff;
+        font-size: 16px;
+      }
+    }
+    .tree-list {
+      width: 100%;
+      background-color: pink;
+      border: 1px solid #ddd;
+    }
+  }
+  .micro-marking {
+    margin-right: 10px;
+    color: #409EFF;
+    font-size: 12px;
+  }
+  .tableMid {
+    margin-top: 15px;
+    span {
+      font-size: 12px;
+      &.item {
+        color: #57aaff;
+        cursor: pointer;
+      }
+    }
+  }
+  .edit-form {
+    .el-select {
+      width: 100%;
+    }
+  }
+}
+.role-manage {
+  .left-top {
+      .el-select {
+        width: 200px;
+        height: 30px;
+      }
+      .el-input,.el-input__inner {
+        height: 30px;
+      }
+      .el-input__suffix {
+        display: flex;
+        align-items: center;
+      }
+      .el-button {
+        padding: 0;
+        margin: 0;
+        height: 30px;
+        width: 105px;
+        span {
+          font-size: 14px;
+        }
+        &:nth-of-type(1) {
+          margin: 10px 0;
+        }
+      }
+  }
+}
+// 角色绑定 end
+
+// 模拟器管理 start
+.simu-manager{
+  .user-name {
+    .ele-input  {
+			position: static !important;
+      margin-left: 37px;
+    }
+    .el-button {
+      margin-left: -38px;
+      padding: 0 20px;
+      height: 30px;
+      background-color: #169BD5;
+      span {
+        color: #fff;
+        font-size: 14px;
+      }
+    }
+  }
+}
+// 模拟器管理 end
+
+// 模板配置 start
+  .template-configurat {
+    .tem-wrapper {
+      padding-bottom: 35px;
+      .tem-header {
+        .el-input {
+          width: 200px;
+          .el-input__inner {
+            height: 30px;
+          }
+        }
+        .el-button {
+          padding-top: 0;
+          padding-bottom: 0;
+          margin-left: auto;
+          width: 100px;
+          height: 30px;
+          background-color: #169BD5;
+          color: #fff;
+        }
+      }
+      .tem-content {
+        .el-table {
+          thead {
+            tr {
+              height: 50px;
+            }
+          }
+          tbody {
+            tr {
+              height: 40px;
+            }
+          }
+          th, td {
+            text-align: center;
+          }
+          th {
+            font-size: 14px;
+            background: #ecf5ff;
+            color: #57aaff;
+          }
+          td {
+            font-size: 12px;
+            color: #888;
+          }
+          .edit,.del {
+            color: #409EFF;
+            font-size: 12px;
+            cursor: pointer;
+          }
+          .edit {
+            margin-right: 20px;
+          }
+        }
+      }
+      .el-input__suffix {
+        .el-input__icon {
+          line-height: 0;
+        }
+      }
+    }
+    .el-pagination {
+      margin-top: 10px;
+    }
+    .el-dialog {
+      table {
+        margin-top: -35px;
+        border-collapse: collapse;
+        border: 1px solid #EBEEF5;
+        tr {
+          td {
+            text-align: center;
+            height: 40px;
+            border: 1px solid #EBEEF5;
+            &:nth-of-type(1) {
+              width: 100px;
+            }
+            &:nth-of-type(2) {
+              padding: 0 5px;
+              box-sizing: border-box;
+              .el-input__inner {
+                height: 28px;
+                line-height: 0;
+              }
+            }
+          }
+        }
+      }
+      .el-button {
+        margin-top: 20px;
+        padding-top: 0;
+        padding-bottom: 0;
+        width: 100px;
+        height: 30px;
+        background-color: #169BD5;
+        span {
+          color: #fff;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+// 模板配置 end
+
+.material{
+	.el-input__inner{
+		height: 30px !important;
+	}
+}
+#wid {
+    .wid-left {
+        .el-textarea__inner {
+            height: 460px !important;
+            width: 100%;
+            resize: none;
+        } 
+        textarea::-webkit-input-placeholder {
+            font-size: 12px;
+            color: #9da8bb;
+        }
+        textarea:-moz-input-placeholder {
+            font-size: 12px;
+            color: #9da8bb;
+        }
+        textarea::-moz-input-placeholder {
+            font-size: 12px;
+            color: #9da8bb;
+        }
+        textarea::-ms-input-placeholder {
+            font-size: 12px;
+            color: #9da8bb;
+        }
+    }
+    .wid-right {
+        .el-table--fit {
+            border: 1px solid #e5e8f1;
+            margin-top: 30px;
+        }
+        .el-table th>.cell {
+            color: #1e2630;
+        }
+        .el-table th {
+            background: #f9fafc !important;
+        }
+    }
+}
